@@ -11,6 +11,7 @@ Aviso: é um protótipo acadêmico. A ONG, os números de impacto e as informaç
 
 Integrantes
 <a href="https://www.linkedin.com/in/jonata-alves-borsari/" target="_blank" rel="noopener">Jonata Alves Borsari</a>
+<br>
 <a href="https://www.linkedin.com/in/joão-frazão-zanon/" target="_blank" rel="noopener">Joao Frazon Zanon</a>
 Objetivo
 
