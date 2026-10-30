@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<!-- COMMIT: feat(html): página de Contato com formulário de inscrição e aviso de simulação
+     O que faz: monta a ESTRUTURA e o CONTEÚDO da página (o estilo fica no CSS e o comportamento no JS). -->
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contato | Instituto Level Up Periferia</title>
+<meta name="description" content="Inscreva-se em CS2 ou Valorant e saiba como ser voluntário.">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=Nunito+Sans:wght@400;700&display=swap">
+<link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+<a class="pular" href="#conteudo">Pular para o conteúdo</a>
+<!-- COMMIT feat(html): cabeçalho e menu. <details> é a caixa que abre ao clicar; <summary> é o botão "Menu"; <ul> é a lista de links. Não usa JS. -->
+<header class="cabecalho"><div class="container">
+<a class="logo" href="index.html">Level Up <span>Periferia</span></a>
+<details class="menu"><summary>Menu</summary><nav aria-label="Menu principal"><ul><li><a href="index.html">Início</a></li><li><a href="sobre.html">Sobre</a></li><li><a href="cs2.html">CS2</a></li><li><a href="valorant.html">Valorant</a></li><li><a href="projetos.html">Projetos</a></li><li><a href="contato.html" aria-current="page">Contato</a></li></ul></nav></details>
+</div></header>
+<!-- COMMIT feat(html): conteúdo principal. <main> guarda o que é único da página; cada <section> é um bloco com <h1>/<h2> em ordem. -->
+<main id="conteudo">
+<section class="secao" aria-labelledby="t1"><div class="container colunas">
+<div>
+<h1 id="t1">Inscrição e contato</h1>
+<h2>Como participar</h2>
+<ol><li>Escolha o jogo (CS2 ou Valorant) no formulário.</li><li>Conte por que quer entrar no projeto.</li><li>Participe da conversa de boas-vindas com a equipe e a família.</li></ol>
+<h2>Como ser voluntário</h2>
+<p>Escolha o assunto "Voluntariado" e o jogo em que pode ajudar.</p>
+<p class="aviso"><strong>Aviso:</strong> este formulário é apenas uma <strong>simulação</strong> de um projeto acadêmico. Nenhuma mensagem é enviada e nenhum dado é coletado ou armazenado.</p>
+</div>
+<!-- COMMIT feat(html): formulário. Cada <label for="x"> aponta para o campo com id="x". novalidate deixa o JS mostrar os erros; required/minlength documentam as regras. -->
+<form id="formContato" class="formulario" novalidate>
+<div class="campo"><label for="nome">Nome</label><input type="text" id="nome" name="nome" required minlength="3" autocomplete="name"></div>
+<div class="campo"><label for="email">E-mail</label><input type="email" id="email" name="email" required autocomplete="email"></div>
+<div class="campo"><label for="jogo">Jogo da inscrição</label>
+<select id="jogo" name="jogo" required><option value="">Escolha um jogo</option><option value="Counter-Strike 2">Counter-Strike 2</option><option value="Valorant">Valorant</option></select></div>
+<div class="campo"><label for="assunto">Assunto</label><input type="text" id="assunto" name="assunto" required></div>
+<div class="campo"><label for="mensagem">Mensagem</label><textarea id="mensagem" name="mensagem" required minlength="10"></textarea></div>
+<button type="submit" class="botao">Enviar inscrição (simulado)</button>
+<div id="mensagemForm" class="mensagem" aria-live="polite"></div>
+</form>
+</div></section>
+</main>
+<!-- COMMIT feat(html): rodapé com créditos. Cada <a href> leva ao LinkedIn de um dev (target="_blank" abre em nova aba). -->
+<footer class="rodape"><div class="container">
+<p><strong>Instituto Level Up Periferia</strong> — protótipo acadêmico; ONG fictícia.</p>
+<p>Imagens: fotos reais da internet, com autoria e licença listadas no README. &copy; 2026 · Projeto Integrador de Front-end</p>
+<p>Desenvolvido por <a href="https://www.linkedin.com/in/jonata-alves-borsari/" target="_blank" rel="noopener">Jonata Alves Borsari</a> e <a href="https://www.linkedin.com/in/jo%C3%A3o-fraz%C3%A3o-zanon/" target="_blank" rel="noopener">Joao Frazon Zanon</a></p>
+</div></footer>
+<script src="formulario.js"></script>
+</body>
+</html>

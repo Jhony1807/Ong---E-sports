@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<!-- COMMIT: feat(html): página Projetos com três cartões e formas de contribuir
+     O que faz: monta a ESTRUTURA e o CONTEÚDO da página (o estilo fica no CSS e o comportamento no JS). -->
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Projetos | Instituto Level Up Periferia</title>
+<meta name="description" content="Conheça os projetos do Instituto Level Up Periferia e saiba como contribuir.">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=Nunito+Sans:wght@400;700&display=swap">
+<link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+<a class="pular" href="#conteudo">Pular para o conteúdo</a>
+<!-- COMMIT feat(html): cabeçalho e menu. <details> é a caixa que abre ao clicar; <summary> é o botão "Menu"; <ul> é a lista de links. Não usa JS. -->
+<header class="cabecalho"><div class="container">
+<a class="logo" href="index.html">Level Up <span>Periferia</span></a>
+<details class="menu"><summary>Menu</summary><nav aria-label="Menu principal"><ul><li><a href="index.html">Início</a></li><li><a href="sobre.html">Sobre</a></li><li><a href="cs2.html">CS2</a></li><li><a href="valorant.html">Valorant</a></li><li><a href="projetos.html" aria-current="page">Projetos</a></li><li><a href="contato.html">Contato</a></li></ul></nav></details>
+</div></header>
+<!-- COMMIT feat(html): conteúdo principal. <main> guarda o que é único da página; cada <section> é um bloco com <h1>/<h2> em ordem. -->
+<main id="conteudo">
+<section class="secao" aria-labelledby="t1"><div class="container">
+<h1 id="t1">Nossos projetos</h1>
+<p>Cada iniciativa depende da comunidade. Veja como você pode ajudar.</p>
+<div class="cartoes">
+<article class="cartao"><img src="img/treino.jpg" width="800" height="533" loading="lazy" alt="Jovens treinando em computadores em um laboratório de informática">
+<div class="cartao-corpo"><h2>Centro de Treino</h2><p>Treinos semanais de CS2 e Valorant com técnicos voluntários, em computadores e internet de qualidade.</p></div>
+<p class="contribua"><strong>Como contribuir:</strong> doe computadores, periféricos ou ajude como técnico.</p></article>
+<article class="cartao"><img src="img/escola.jpg" width="800" height="533" loading="lazy" alt="Estudantes em sala de aula acompanhados por professora">
+<div class="cartao-corpo"><h2>Jogador Estudante</h2><p>Reforço escolar e inglês para quem participa dos times, porque estudar também faz parte da carreira.</p></div>
+<p class="contribua"><strong>Como contribuir:</strong> seja professor voluntário ou apadrinhe uma bolsa.</p></article>
+<article class="cartao"><img src="img/campeonato.jpg" width="800" height="533" loading="lazy" alt="Público assistindo a um campeonato de e-sports em um ginásio">
+<div class="cartao-corpo"><h2>Liga da Quebrada</h2><p>Campeonatos amadores entre bairros, abertos à comunidade, que revelam novos talentos.</p></div>
+<p class="contribua"><strong>Como contribuir:</strong> ajude na organização ou patrocine premiações.</p></article>
+</div>
+<div class="acoes"><a class="botao" href="contato.html">Quero participar</a></div>
+</div></section>
+</main>
+<!-- COMMIT feat(html): rodapé com créditos. Cada <a href> leva ao LinkedIn de um dev (target="_blank" abre em nova aba). -->
+<footer class="rodape"><div class="container">
+<p><strong>Instituto Level Up Periferia</strong> — protótipo acadêmico; ONG fictícia.</p>
+<p>Imagens: fotos reais da internet, com autoria e licença listadas no README. &copy; 2026 · Projeto Integrador de Front-end</p>
+<p>Desenvolvido por <a href="https://www.linkedin.com/in/jonata-alves-borsari/" target="_blank" rel="noopener">Jonata Alves Borsari</a> e <a href="https://www.linkedin.com/in/jo%C3%A3o-fraz%C3%A3o-zanon/" target="_blank" rel="noopener">Joao Frazon Zanon</a></p>
+</div></footer>
+</body>
+</html>

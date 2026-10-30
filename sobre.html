@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<!-- COMMIT: feat(html): página Sobre com história, lan house, objetivos e botão da interação JS
+     O que faz: monta a ESTRUTURA e o CONTEÚDO da página (o estilo fica no CSS e o comportamento no JS). -->
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sobre | Instituto Level Up Periferia</title>
+<meta name="description" content="História, missão, público e objetivos do Instituto Level Up Periferia.">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=Nunito+Sans:wght@400;700&display=swap">
+<link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+<a class="pular" href="#conteudo">Pular para o conteúdo</a>
+<!-- COMMIT feat(html): cabeçalho e menu. <details> é a caixa que abre ao clicar; <summary> é o botão "Menu"; <ul> é a lista de links. Não usa JS. -->
+<header class="cabecalho"><div class="container">
+<a class="logo" href="index.html">Level Up <span>Periferia</span></a>
+<details class="menu"><summary>Menu</summary><nav aria-label="Menu principal"><ul><li><a href="index.html">Início</a></li><li><a href="sobre.html" aria-current="page">Sobre</a></li><li><a href="cs2.html">CS2</a></li><li><a href="valorant.html">Valorant</a></li><li><a href="projetos.html">Projetos</a></li><li><a href="contato.html">Contato</a></li></ul></nav></details>
+</div></header>
+<!-- COMMIT feat(html): conteúdo principal. <main> guarda o que é único da página; cada <section> é um bloco com <h1>/<h2> em ordem. -->
+<main id="conteudo">
+<section class="secao" aria-labelledby="t1"><div class="container">
+<h1 id="t1">Sobre o Instituto</h1>
+<div class="colunas"><article>
+<h2>Nossa história</h2>
+<p>O Instituto nasceu em 2019, quando um grupo de moradores da zona leste de São Paulo percebeu que muitos jovens talentosos nos games nunca tinham acesso a computador, internet estável ou campeonatos. Começamos com cinco computadores doados e um sábado de treino por semana.</p>
+<h2>Missão</h2>
+<p>Abrir caminhos para crianças da periferia no cenário dos e-sports, com treino, estudo e acompanhamento da família.</p>
+</article><article>
+<h2>Público atendido</h2>
+<ul><li>Crianças e adolescentes de 10 a 17 anos de bairros da periferia</li><li>Famílias que precisam de apoio para acompanhar a carreira dos jovens</li><li>Escolas públicas parceiras</li></ul>
+</article></div>
+<h2>Da lan house ao campeonato</h2>
+<p>Para muita gente da periferia, a lan house foi a primeira porta para os jogos. Era lá que se pagava por hora, se aprendia com os amigos e se descobria que jogar em equipe exige comunicação e disciplina.</p>
+<img src="img/lanhouse-1.jpg" width="800" height="533" alt="Lan house antiga com fileiras de computadores de tubo e jovens jogando"><p class="legenda">Lan house dos anos 2000, com monitores de tubo.</p>
+<p>Muitos jogadores profissionais brasileiros começaram assim, em máquinas simples e partidas disputadas por apostas de uma hora a mais de jogo. O Instituto quer que essa porta continue aberta, agora com orientação e segurança.</p>
+<img src="img/lanhouse-2.jpg" width="800" height="533" alt="Interior de uma lan house antiga com cabines e computadores"><p class="legenda">Cabines de uma lan house antiga: o primeiro "centro de treino" de muita gente.</p>
+</div></section>
+<section class="secao clara" aria-labelledby="t2"><div class="container">
+<h2 id="t2">Objetivos</h2>
+<ol><li>Oferecer treino de CS2 e Valorant em equipamentos de qualidade.</li><li>Manter os jovens na escola, com reforço e bolsas.</li><li>Levar times da periferia a campeonatos amadores e profissionais.</li><li>Formar profissionais ligados aos games: narração, edição, análise e organização.</li></ol>
+<!-- COMMIT feat(html): ligação com o JS. O botão tem id="btnMaisInfo" e o painel tem id="infoExtra"; o script.js usa esses ids. O link "Saiba mais" só leva para projetos.html. -->
+<div class="acoes"><button type="button" id="btnMaisInfo" class="botao" aria-expanded="false" aria-controls="infoExtra">Ver informações institucionais</button>
+<a class="botao secundario" href="projetos.html">Saiba mais sobre nós</a></div>
+<div id="infoExtra" class="info-extra" style="display:none">
+<h3>Informações institucionais</h3>
+<ul><li><strong>Fundação:</strong> 2019 (fictícia)</li><li><strong>Sede:</strong> São Paulo – SP (fictícia)</li><li><strong>Valores:</strong> igualdade de oportunidades, respeito e jogo limpo</li><li><strong>Parcerias:</strong> escolas, associações de bairro e times amadores</li></ul>
+</div></div></section>
+</main>
+<!-- COMMIT feat(html): rodapé com créditos. Cada <a href> leva ao LinkedIn de um dev (target="_blank" abre em nova aba). -->
+<footer class="rodape"><div class="container">
+<p><strong>Instituto Level Up Periferia</strong> — protótipo acadêmico; ONG fictícia.</p>
+<p>Imagens: fotos reais da internet, com autoria e licença listadas no README. &copy; 2026 · Projeto Integrador de Front-end</p>
+<p>Desenvolvido por <a href="https://www.linkedin.com/in/jonata-alves-borsari/" target="_blank" rel="noopener">Jonata Alves Borsari</a> e <a href="https://www.linkedin.com/in/jo%C3%A3o-fraz%C3%A3o-zanon/" target="_blank" rel="noopener">Joao Frazon Zanon</a></p>
+</div></footer>
+<script src="script.js"></script>
+</body>
+</html>

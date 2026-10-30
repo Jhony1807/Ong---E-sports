@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<!-- COMMIT: feat(html): página do Counter-Strike 2 com história, organizações e inscrição
+     O que faz: monta a ESTRUTURA e o CONTEÚDO da página (o estilo fica no CSS e o comportamento no JS). -->
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Counter-Strike 2 | Instituto Level Up Periferia</title>
+<meta name="description" content="História, organizações e curiosidades de Counter-Strike 2."/>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=Nunito+Sans:wght@400;700&display=swap">
+<link rel="stylesheet" href="estilos.css">
+</head>
+<body class="tema-cs2">
+<a class="pular" href="#conteudo">Pular para o conteúdo</a>
+<!-- COMMIT feat(html): cabeçalho e menu. <details> é a caixa que abre ao clicar; <summary> é o botão "Menu"; <ul> é a lista de links. Não usa JS. -->
+<header class="cabecalho"><div class="container">
+<a class="logo" href="index.html">Level Up <span>Periferia</span></a>
+<details class="menu"><summary>Menu</summary><nav aria-label="Menu principal"><ul><li><a href="index.html">Início</a></li><li><a href="sobre.html">Sobre</a></li><li><a href="cs2.html" aria-current="page">CS2</a></li><li><a href="valorant.html">Valorant</a></li><li><a href="projetos.html">Projetos</a></li><li><a href="contato.html">Contato</a></li></ul></nav></details>
+</div></header>
+<!-- COMMIT feat(html): conteúdo principal. <main> guarda o que é único da página; cada <section> é um bloco com <h1>/<h2> em ordem. -->
+<main id="conteudo">
+<section class="secao jogo cs2"><div class="container">
+<div class="titulo-jogo"><img class="icone" src="img/icone-cs2.svg" width="64" height="64" alt="Ícone estilizado de Counter-Strike 2"><h1>Counter-Strike 2</h1></div>
+<img src="img/cs2-1.jpg" width="900" height="500" alt="Equipes jogando Counter-Strike 2 no palco de um campeonato">
+<p class="legenda">Final de campeonato de Counter-Strike.</p>
+<h2>A história</h2>
+<p>Counter-Strike nasceu em 1999 como um mod (modificação feita por fãs) do jogo Half-Life. A Valve comprou a ideia e lançou versões oficiais: Counter-Strike 1.6, Source (2004) e Global Offensive, o CS:GO (2012). O CS:GO virou gratuito em 2018.</p>
+<p>Em setembro de 2023 chegou o Counter-Strike 2, com motor gráfico novo (Source 2), fumaças que reagem ao cenário e servidores mais precisos.</p>
+<h2>Como se joga</h2>
+<p>Duas equipes de 5 jogadores se enfrentam. Os terroristas tentam plantar uma bomba e os antiterroristas tentam impedir. Ninguém renasce na rodada, então cada decisão importa. Ganha quem vence 13 rodadas primeiro. O dinheiro ganho nas rodadas serve para comprar armas, e saber economizar é parte da estratégia.</p>
+<img src="img/cs2-2.jpg" width="900" height="500" alt="Jogador usando fones e jogando em um computador">
+<p class="legenda">Treino exige foco, comunicação e muita repetição.</p>
+<h2>Como o CS pode mudar uma vida</h2>
+<p>O jogo ensina a decidir sob pressão, falar de forma curta e clara e confiar na equipe. Isso abre caminhos como jogador, treinador, analista, narrador e criador de conteúdo. No Brasil, muita gente aprendeu em lan houses e hoje vive do jogo.</p>
+<h2>Principais organizações</h2>
+<h3>FURIA (Brasil)</h3><p>Fundada em 2017, em São Paulo. É uma das equipes brasileiras mais conhecidas e disputa os maiores campeonatos do mundo.</p>
+<h3>MIBR (Brasil)</h3><p>Marca criada em 2003 com o nome Made in Brazil. Mantém tradição no cenário brasileiro. A equipe brasileira de FalleN e coldzera, que na época jogava pela SK Gaming, venceu dois Majors em 2016.</p>
+<h3>Natus Vincere, a NAVI (Ucrânia)</h3><p>Fundada em 2009. Ganhou o Major de Estocolmo em 2021, com o astro s1mple.</p>
+<h3>Team Vitality (França)</h3><p>Fundada em 2013. Está entre as equipes mais fortes dos últimos anos.</p>
+<h3>FaZe Clan (EUA)</h3><p>Fundada em 2010. Une equipe de e-sports e criadores de conteúdo.</p>
+<h2>Quem organiza os campeonatos</h2>
+<p>A Valve patrocina os Majors, os maiores torneios do jogo. Empresas como ESL (Intel Extreme Masters), BLAST e PGL organizam os campeonatos. Em 2022, o IEM Rio Major foi o primeiro Major no Brasil, realizado no Rio de Janeiro.</p>
+<a class="botao" href="contato.html">Inscrever-se no CS2</a>
+</div></section>
+</main>
+<!-- COMMIT feat(html): rodapé com créditos. Cada <a href> leva ao LinkedIn de um dev (target="_blank" abre em nova aba). -->
+<footer class="rodape"><div class="container">
+<p><strong>Instituto Level Up Periferia</strong> — protótipo acadêmico; ONG fictícia.</p>
+<p>Imagens: fotos reais da internet, com autoria e licença listadas no README. &copy; 2026 · Projeto Integrador de Front-end</p>
+<p>Desenvolvido por <a href="https://www.linkedin.com/in/jonata-alves-borsari/" target="_blank" rel="noopener">Jonata Alves Borsari</a> e <a href="https://www.linkedin.com/in/jo%C3%A3o-fraz%C3%A3o-zanon/" target="_blank" rel="noopener">Joao Frazon Zanon</a></p>
+</div></footer>
+</body>
+</html>

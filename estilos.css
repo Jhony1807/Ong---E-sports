@@ -1,0 +1,121 @@
+/* ======================================================================
+   COMMITS DO CSS (cada seção abaixo é um commit)
+   1/8 variáveis e base      4/8 seções, destaque e botões   7/8 páginas dos jogos
+   2/8 cabeçalho e menu      5/8 números, cartões e avisos   8/8 celular (@media)
+   3/8 rodapé                6/8 formulário
+   Sintaxe: "seletor { propriedade: valor; }". Ponto (.) = classe, # = id.
+   ====================================================================== */
+
+/* ===== COMMIT style(css) 1/8: variáveis de tema e base ===== */
+:root {
+  --cor-fundo-base: #0b0d10;
+  --cor-card: #141820;
+  --texto-principal: #e2e8f0;
+  --texto-suave: #94a3b8;
+  --marca: #ff3d81;            /* rosa neon da ONG */
+  --ciano: #22d3ee;
+  --amarelo: #ffc400;
+  --transicao: all 0.3s ease;
+  /* valores padrão; as páginas dos jogos trocam estes três */
+  --accent-game: var(--marca);
+  --bg-game: #0b0d10;
+  --detalhe-hud: #232a38;
+  --texto-botao: #0b0d10;      /* texto escuro nos botões: bom contraste */
+}
+body.tema-cs2 { --accent-game: #f39c12; --bg-game: #0e1114; --detalhe-hud: #2c3e50; }
+body.tema-valorant { --accent-game: #ff4655; --bg-game: #0f1923; --detalhe-hud: #1f2b38; }
+
+* { box-sizing: border-box; }
+body { font-family: 'Nunito Sans', Arial, sans-serif; margin: 0; line-height: 1.6; background: var(--cor-fundo-base); color: var(--texto-principal); }
+h1, h2, h3 { font-family: 'Barlow Condensed', 'Arial Narrow', sans-serif; line-height: 1.1; margin: 0 0 .8rem; text-transform: uppercase; letter-spacing: 1px; }
+h1 { font-size: 2.8rem; }
+h2 { font-size: 1.9rem; color: var(--accent-game); }
+h3 { font-size: 1.3rem; }
+img { max-width: 100%; height: auto; display: block; background: var(--cor-card); border-radius: 4px; }
+a { color: var(--ciano); }
+a:focus-visible, button:focus-visible, summary:focus-visible, input:focus-visible, select:focus-visible, textarea:focus-visible { outline: 3px solid var(--amarelo); outline-offset: 2px; }
+.container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
+.pular { position: absolute; left: -999px; }
+.pular:focus { left: 1rem; top: 1rem; background: #fff; color: #000; padding: .5rem; z-index: 9; }
+.legenda { font-size: .9rem; color: var(--texto-suave); margin: .4rem 0 1.5rem; }
+
+/* ===== COMMIT style(css) 2/8: cabeçalho e menu (abre ao clicar em "Menu") ===== */
+.cabecalho { background: #05070a; border-bottom: 4px solid var(--accent-game); }
+.cabecalho .container { display: flex; justify-content: space-between; align-items: center; gap: .5rem; padding-top: .8rem; padding-bottom: .8rem; }
+.logo { font-family: 'Barlow Condensed', sans-serif; font-size: 1.7rem; font-weight: 700; color: #fff; text-decoration: none; text-transform: uppercase; }
+.logo span { color: var(--accent-game); }
+.menu { position: relative; }
+.menu summary { list-style: none; cursor: pointer; background: var(--accent-game); color: var(--texto-botao); font-weight: 700; padding: .5rem 1rem; border-radius: 4px; }
+.menu summary::-webkit-details-marker { display: none; }
+.menu summary::before { content: "\2630  "; }
+.menu nav { position: absolute; right: 0; top: calc(100% + .5rem); background: var(--cor-card); border: 2px solid var(--accent-game); border-radius: 6px; box-shadow: 0 8px 24px rgba(0,0,0,.6); min-width: 210px; z-index: 5; }
+.menu ul { list-style: none; margin: 0; padding: .4rem; }
+.menu a { display: block; padding: .6rem .8rem; color: var(--texto-principal); text-decoration: none; border-radius: 4px; font-weight: 700; }
+.menu a:hover, .menu a[aria-current="page"] { background: var(--accent-game); color: var(--texto-botao); }
+
+/* ===== COMMIT style(css) 3/8: rodapé ===== */
+.rodape { background: #05070a; color: var(--texto-suave); padding: 1.5rem 0; font-size: .95rem; border-top: 4px solid var(--accent-game); }
+.rodape p { margin: .3rem 0; }
+
+/* ===== COMMIT style(css) 4/8: seções, destaque e botões ===== */
+.secao { padding: 2.5rem 0; }
+.clara { background: var(--cor-card); }
+.colunas { display: flex; gap: 2rem; align-items: flex-start; }   /* colunas alinhadas pelo topo */
+.colunas > * { flex: 1; }
+.destaque { background: linear-gradient(135deg, #2a1050 0%, #0b0d10 70%); }
+.destaque .container { display: flex; gap: 2rem; align-items: center; }
+.destaque .container > * { flex: 1; }
+.etiqueta { font-weight: 700; color: var(--amarelo); margin: 0 0 .5rem; }
+.acoes { display: flex; gap: .8rem; flex-wrap: wrap; margin-top: 1rem; }
+/* Botão chanfrado, igual em todas as páginas */
+.botao { display: inline-block; text-align: center; background: var(--accent-game); color: var(--texto-botao); font-family: 'Barlow Condensed', sans-serif; font-size: 1.2rem; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; border: none; padding: 12px 28px; clip-path: polygon(8% 0%, 100% 0%, 92% 100%, 0% 100%); transition: var(--transicao); cursor: pointer; text-decoration: none; }
+.botao:hover { background: #fff; color: #0b0d10; transform: translateY(-3px); }
+.botao.secundario { background: transparent; color: var(--ciano); box-shadow: inset 0 0 0 2px var(--ciano); }
+.botao.secundario:hover { background: var(--ciano); color: #0b0d10; }
+
+/* ===== COMMIT style(css) 5/8: números, cartões e avisos ===== */
+.numeros { display: flex; flex-wrap: wrap; gap: 1rem; list-style: none; padding: 0; }
+.numeros li { flex: 1; min-width: 150px; background: var(--cor-card); border-top: 5px solid var(--marca); padding: 1rem; border-radius: 4px; }
+.numeros li:nth-child(2) { border-color: var(--ciano); }
+.numeros li:nth-child(3) { border-color: var(--amarelo); }
+.numeros li:nth-child(4) { border-color: #a78bfa; }
+.numeros strong { display: block; font: 700 2.4rem 'Barlow Condensed', sans-serif; color: #fff; }
+.cartoes { display: flex; flex-wrap: wrap; gap: 1.2rem; margin: 1.5rem 0; }
+.cartao { flex: 1; min-width: 260px; background: var(--cor-card); border: 1px solid var(--detalhe-hud); border-top: 5px solid var(--marca); border-radius: 4px; overflow: hidden; }
+.cartao:nth-child(2) { border-top-color: var(--ciano); }
+.cartao:nth-child(3) { border-top-color: var(--amarelo); }
+.cartao img { border-radius: 0; }
+.cartao-corpo { padding: 1rem; }
+.contribua { margin: 0; padding: .8rem 1rem; background: var(--detalhe-hud); }
+.aviso { background: #2a2410; color: #fde9a8; border-left: 5px solid var(--amarelo); padding: .8rem 1rem; margin: 0; }
+.info-extra { margin-top: 1rem; padding: 1rem; background: var(--cor-fundo-base); border: 2px solid var(--ciano); border-radius: 4px; }
+
+/* ===== COMMIT style(css) 6/8: formulário ===== */
+.formulario { background: var(--cor-card); border: 1px solid var(--detalhe-hud); border-top: 5px solid var(--accent-game); border-radius: 4px; padding: 1.2rem; }
+.campo { margin-bottom: 1rem; }
+.campo label { display: block; font-weight: 700; margin-bottom: .25rem; }
+.campo input, .campo select, .campo textarea { width: 100%; padding: .6rem; background: var(--cor-fundo-base); color: var(--texto-principal); border: 2px solid var(--detalhe-hud); border-radius: 4px; font: inherit; }
+.campo textarea { min-height: 110px; }
+.mensagem { margin-top: 1rem; font-weight: 700; }
+.mensagem.erro { color: #ff8a8a; }
+.mensagem.ok { color: #7ee2a0; }
+
+/* ===== COMMIT style(css) 7/8: páginas dos jogos (tema pelo body.tema-cs2 / body.tema-valorant) ===== */
+.titulo-jogo { display: flex; align-items: center; gap: 16px; margin-bottom: 20px; }
+.titulo-jogo .icone { width: 64px; height: 64px; background: none; filter: drop-shadow(0 0 8px var(--accent-game)); }
+.secao.jogo { background-color: var(--bg-game); border-left: 4px solid var(--accent-game); position: relative; overflow: hidden; padding: 40px 0; }
+.secao.jogo .container { max-width: 860px; }
+.secao.jogo::before { content: ""; position: absolute; top: 0; right: 0; width: 400px; height: 400px; background: radial-gradient(circle, var(--accent-game) 0%, transparent 70%); opacity: .06; pointer-events: none; }
+.secao.jogo h1 { font-size: 2.8rem; border-bottom: 2px solid var(--detalhe-hud); padding-bottom: 10px; margin: 0; }
+.secao.jogo h2 { margin-top: 40px; font-size: 1.8rem; }
+.secao.jogo img:not(.icone) { border: 2px solid var(--detalhe-hud); box-shadow: 0 10px 30px rgba(0,0,0,.6); transition: var(--transicao); margin-top: 1rem; }
+.secao.jogo img:not(.icone):hover { border-color: var(--accent-game); transform: scale(1.01); }
+.secao.jogo .legenda { border-left: 2px solid var(--accent-game); padding-left: 10px; font-style: italic; }
+.secao.jogo h3 { color: #fff; background: var(--detalhe-hud); padding: 6px 12px; border-left: 3px solid var(--accent-game); margin-top: 20px; display: inline-block; }
+
+/* ===== COMMIT style(css) 8/8: celular (até 700px) ===== */
+@media (max-width: 700px) {
+  h1, .secao.jogo h1 { font-size: 2.1rem; }
+  .colunas, .destaque .container { flex-direction: column; align-items: stretch; }
+  .acoes .botao { width: 100%; }
+}

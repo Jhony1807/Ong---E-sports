@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<!-- COMMIT: feat(html): página do Valorant com história, organizações e inscrição
+     O que faz: monta a ESTRUTURA e o CONTEÚDO da página (o estilo fica no CSS e o comportamento no JS). -->
+<html lang="pt-BR">
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Valorant | Instituto Level Up Periferia</title>
+     <meta name="description" content="História, organizações e curiosidades de Valorant.">
+     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=Nunito+Sans:wght@400;700&display=swap">
+     <link rel="stylesheet" href="estilos.css">
+</head>
+<body class="tema-valorant">
+<a class="pular" href="#conteudo">Pular para o conteúdo</a>
+
+<!-- COMMIT feat(html): cabeçalho e menu. <details> é a caixa que abre ao clicar; <summary> é o botão "Menu"; <ul> é a lista de links. Não usa JS. -->
+<header class="cabecalho">
+     <div class="container">
+          <a class="logo" href="index.html">Level Up <span>Periferia</span></a>
+          <details class="menu">
+               <summary>Menu</summary>
+               <nav aria-label="Menu principal">
+                    <ul>
+                         <li><a href="index.html">Início</a></li>
+                         <li><a href="sobre.html">Sobre</a></li>
+                         <li><a href="cs2.html">CS2</a></li>
+                         <li><a href="valorant.html" aria-current="page">Valorant</a></li>
+                         <li><a href="projetos.html">Projetos</a></li>
+                         <li><a href="contato.html">Contato</a></li>
+                    </ul>
+               </nav>
+          </details>
+     </div>
+</header>
+
+<!-- COMMIT feat(html): conteúdo principal. <main> guarda o que é único da página; cada <section> é um bloco com <h1>/<h2> em ordem. -->
+<main id="conteudo">
+     <section class="secao jogo valorant">
+          <div class="container">
+               <div class="titulo-jogo">
+                    <img class="icone" src="img/icone-valorant.svg" width="64" height="64" alt="Ícone estilizado de Valorant">
+                    <h1>Valorant</h1>
+               </div>
+               <img src="img/valorant-1.jpg" width="900" height="500" alt="Equipes disputando uma partida de Valorant em uma arena">
+               <p class="legenda">Disputa de Valorant em evento presencial.</p>
+               
+               <h2>A história</h2>
+               <p>A Riot Games, criadora de League of Legends, anunciou o Valorant em 2019 com o nome de projeto "Project A". O teste fechado começou em abril de 2020 e o lançamento oficial foi em junho de 2020. O jogo é gratuito.</p>
+               <p>O cenário competitivo cresceu rápido. Em 2021 começou o VCT (Valorant Champions Tour), circuito oficial da Riot, e o primeiro Champions foi em Berlim, vencido pela equipe Acend.</p>
+               
+               <h2>Como se joga</h2>
+               <p>Duas equipes de 5 jogadores, uma ataca e outra defende, e vence quem ganhar 13 rodadas primeiro. A diferença para o CS é que cada jogador escolhe um agente, personagem com habilidades próprias, como criar fumaça, curar aliados ou revelar inimigos.</p>
+               <img src="img/valorant-2.jpg" width="900" height="500" alt="Jovens jogando em computadores com fones de ouvido">
+               <p class="legenda">Jogar em equipe é a parte central do Valorant.</p>
+               
+               <h2>Como o Valorant pode mudar uma vida</h2>
+               <p>Estratégia, trabalho em equipe e inglês aparecem a todo momento. O jogo abre portas em times, produção de eventos e transmissões. Para quem não teve acesso a esse mundo, treino organizado faz a diferença.</p>
+               
+               <h2>Principais organizações</h2>
+               <h3>LOUD (Brasil)</h3>
+               <p>Fundada em 2019. A equipe de Valorant foi campeã mundial no Champions de 2022, em Istambul, e mostrou que o Brasil compete de igual para igual.</p>
+               
+               <h3>FURIA (Brasil)</h3>
+               <p>Também tem equipe de Valorant e disputa o circuito das Américas.</p>
+               
+               <h3>Sentinels (EUA)</h3>
+               <p>Uma das primeiras grandes equipes do jogo. Venceu o Masters de Reykjavík em 2021.</p>
+               
+               <h3>Paper Rex (Singapura)</h3>
+               <p>Fundada em 2020. É conhecida pelo estilo de jogo ousado.</p>
+               
+               <h3>Fnatic (Reino Unido)</h3>
+               <p>Uma das organizações mais antigas dos e-sports, fundada em 2004.</p>
+               
+               <h2>Quem organiza os campeonatos</h2>
+               <p>A própria Riot Games organiza o VCT, dividido em ligas regionais (Américas, Europa, Pacífico e China), além dos Masters e do Champions. O circuito Game Changers incentiva a participação de mulheres e pessoas de gêneros sub-representados.</p>
+               
+               <a class="botao" href="contato.html">Inscrever-se no Valorant</a>
+          </div>
+     </section>
+</main>
+
+<!-- COMMIT feat(html): rodapé com créditos. Cada <a href> leva ao LinkedIn de um dev (target="_blank" abre em nova aba). -->
+<footer class="rodape">
+     <div class="container">
+          <p><strong>Instituto Level Up Periferia</strong> — protótipo acadêmico; ONG fictícia.</p>
+          <p>Imagens: fotos reais da internet, com autoria e licença listadas no README. &copy; 2026 · Projeto Integrador de Front-end</p>
+          <p>Desenvolvido por <a href="https://www.linkedin.com/in/jonata-alves-borsari/" target="_blank" rel="noopener">Jonata Alves Borsari</a> e <a href="https://www.linkedin.com/in/jo%C3%A3o-fraz%C3%A3o-zanon/" target="_blank" rel="noopener">Joao Frazon Zanon</a></p>
+     </div>
+</footer>
+
+</body>
+</html>
