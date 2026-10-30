@@ -10,9 +10,9 @@ Projeto Integrador de Fundamentos da Web e Desenvolvimento Front-end (HTML, CSS 
 Aviso: é um protótipo acadêmico. A ONG, os números de impacto e as informações institucionais são fictícios. Nenhuma mensagem é enviada e nenhum dado é coletado ou armazenado.
 
 Integrantes
-<a href="https://www.linkedin.com/in/jonata-alves-borsari/" target="_blank" rel="noopener">Jonata Alves Borsari</a>
+<p><a href="https://www.linkedin.com/in/jonata-alves-borsari/" target="_blank" rel="noopener">Jonata Alves Borsari</a></p>
 <br>
-<a href="https://www.linkedin.com/in/joão-frazão-zanon/" target="_blank" rel="noopener">Joao Frazon Zanon</a>
+<p><a href="https://www.linkedin.com/in/joão-frazão-zanon/" target="_blank" rel="noopener">Joao Frazon Zanon</a></p>
 Objetivo
 
 Divulgar a causa da ONG, apresentar seus projetos, explicar os dois jogos treinados (história, como se joga e principais organizações) e receber inscrições simuladas de jovens e voluntários.
